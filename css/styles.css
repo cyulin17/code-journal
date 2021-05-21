@@ -1,0 +1,62 @@
+body {
+  background-color: #f0f0f0;
+}
+
+div {
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.header {
+  height: 35px;
+  background-color: #562b81;
+}
+
+.header h5 {
+  margin: 0;
+  line-height: 35px;
+  font-weight: 300;
+  color: #fff;
+}
+
+h1 {
+  margin: 20px 0;
+}
+
+img {
+  border-radius: 5px;
+}
+
+label {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+input {
+  height: 35px;
+  width: 400px;
+  margin-top: 6px;
+  border: 1px solid #d3d3d3;
+  border-radius: 5px;
+}
+
+textarea {
+  border: 1px solid #d3d3d3;
+  border-radius: 5px;
+}
+
+.save {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.save-button {
+  width: 55px;
+  height: 25px;
+  border: none;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #562b81;
+  cursor: pointer;
+}
