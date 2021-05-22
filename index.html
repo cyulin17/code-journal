@@ -1,25 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Code Journal</title>
   <link rel="icon" href="images/favicon.ico">
-  <link
-    rel="stylesheet"
-    crossorigin="anonymous"
+  <link rel="stylesheet" crossorigin="anonymous"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-  <header>
+  <header class="header">
+    <div class="container">
+      <h5 class="column-full">Code Journal</h5>
+    </div>
   </header>
   <main>
+    <div data-veiw="entry-form" class="container">
+      <div class="column-full">
+        <h1>New Entry</h1>
+      </div>
+      <form action="example.php" method="get" name="name1" id="entry-form">
+        <div class="row">
+          <div class="column-half">
+            <img src="./images/placeholder-image-square.jpg" class="column-full" alt="images">
+          </div>
+          <div class="column-half">
+            <label for="title">Title</label>
+            <div>
+              <input class="column-full" type="text" name="title" id="title" required>
+            </div>
+            <div>
+              <label for="photo">Photo URL</label>
+              <div>
+                <input class="column-full" type="url" name="photoUrl" id="photoUrl" required>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="column-full">
+            <label for="notes">Notes</label>
+            <div>
+              <textarea class="column-full" name="notes" id="notes" rows="10" required></textarea>
+            </div>
+
+            <div class="row">
+              <div class="save column-full">
+                <button class="save-button">SAVE</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
   </main>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
 </body>
+
 </html>
