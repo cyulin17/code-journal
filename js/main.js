@@ -29,7 +29,6 @@ $entryForm.addEventListener('submit', function (event) {
 
   data.entries.unshift(entryId);
   var newEntry = renderEntry(entryId);
-
   var $ul = document.querySelector('ul');
   $entrylist.prepend(newEntry);
 
