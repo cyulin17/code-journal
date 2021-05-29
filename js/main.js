@@ -13,8 +13,6 @@ $input.addEventListener('input', function (event) {
   $img.setAttribute('src', event.target.value);
 });
 
-var nextEntryId = 1;
-
 $entryForm.addEventListener('submit', function (event) {
   event.preventDefault();
 
@@ -23,23 +21,22 @@ $entryForm.addEventListener('submit', function (event) {
   entryId.title = $entryForm.elements.title.value;
   entryId.photoUrl = $entryForm.elements.photoUrl.value;
   entryId.notes = $entryForm.elements.notes.value;
-  entryId.EntryId = data.nextEntryId;
+  entryId.EntryId = data.newEntryId;
 
-  nextEntryId++;
+  data.newEntryId++;
 
   data.entries.unshift(entryId);
   var newEntry = renderEntry(entryId);
-  var $ul = document.querySelector('ul');
   $entrylist.prepend(newEntry);
 
   $img.setAttribute('src', 'images/placeholder-image-square.jpg');
 
   $entryForm.reset();
 
-  $newEntry.className = "hidden";
-  $noEntry.className = "hidden";
+  $newEntry.className = 'hidden';
+  $noEntry.className = 'hidden';
   $viewEntry.className = '';
-  data.view = "entries";
+  data.view = 'entries';
 
 });
 
@@ -62,7 +59,7 @@ function renderEntry(entry) {
   $columnHalf.appendChild($img);
 
   var $entriesText = document.createElement('div');
-  $entriesText.className = "column-half entries-text";
+  $entriesText.className = 'column-half entries-text';
   $row.appendChild($entriesText);
 
   var $title = document.createElement('h2');
@@ -77,30 +74,30 @@ function renderEntry(entry) {
 
 }
 
-document.addEventListener('DOMContentLoaded', function(event) {
+document.addEventListener('DOMContentLoaded', function (event) {
 
   for (var i = 0; i < data.entries.length; i++) {
     var $entrydata = renderEntry(data.entries[i]);
     $entrylist.appendChild($entrydata);
   }
 
-  if (data.view === "entries") {
-    $newEntry.className = "hidden";
-  } else if (data.view === "entry-form") {
-    $noEntry.className = "hidden";
-    $viewEntry.className = "hidden";
+  if (data.view === 'entries') {
+    $newEntry.className = 'hidden';
+  } else if (data.view === 'entry-form') {
+    $noEntry.className = 'hidden';
+    $viewEntry.className = 'hidden';
   }
 
-  if (data.entries.length === "") {
-    $noEntry.className = "";
+  if (data.entries.length === '') {
+    $noEntry.className = '';
   } else {
-    $noEntry.className = "hidden";
+    $noEntry.className = 'hidden';
   }
 
-})
+});
 
 $newButton.addEventListener('click', function (event) {
-  $viewEntry.className = "hidden";
-  $newEntry.className = "";
+  $viewEntry.className = 'hidden';
+  $newEntry.className = '';
   data.view = 'entry-form';
-})
+});
