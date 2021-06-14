@@ -15,13 +15,15 @@
 </head>
 
 <body>
-  <header class="header">
-    <div class="container">
-      <h5 class="column-full">Code Journal</h5>
-    </div>
-  </header>
   <main>
-    <div data-veiw="entry-form" class="container">
+    <div data-veiw="entry-form">
+          <header class="header">
+            <div class="container">
+              <h5 class="column-full">Code Journal</h5>
+
+            </div>
+          </header>
+          <div class="container">
       <div class="column-full">
         <h1>New Entry</h1>
       </div>
@@ -60,7 +62,46 @@
         </div>
       </form>
     </div>
+    </div>
   </main>
+
+  <!-- user can view their entries -->
+
+  <div data-veiw="entries">
+    <header class="header">
+      <div class="container">
+        <h5 class="column-full">Code Journal<span><a class="entries"> Entries</a></span></h5>
+
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="row">
+        <div class="column-full entries-header">
+          <h1>Entries</h1>
+          <button class="new-button">
+            <a data-view="entry-form">New</a>
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="row entries-area">
+        <div class="column-full">
+          <h4 class="no-entry-text">No entries have been recorded.</h4>
+        </div>
+      </div>
+      <ul class="entries-lists">
+      </ul>
+
+    </div>
+
+  </div>
+
+
+
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
 </body>
